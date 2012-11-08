@@ -7,6 +7,8 @@ class IdeasController < ApplicationController
 
   def show
     @idea = Idea.find(params[:id])
+
+    redirect_to root_path unless owns_idea(current_user, @idea)
   end
 
   def new
@@ -40,4 +42,14 @@ class IdeasController < ApplicationController
     @idea.destroy
     redirect_to ideas_url, :notice => "Successfully destroyed idea."
   end
+
+  private
+
+    def owns_idea(user, idea)
+      if user and idea
+        return idea.user == user
+      else
+        return false
+      end
+    end
 end
