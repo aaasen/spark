@@ -8,7 +8,7 @@
 			%ul.nav
 				- if current_user
 					%li
-						%a{ :href => dailycred_engine.logout_path }
+						%a{ :href => destroy_user_session_path(current_user) }
 							%b Sign Out
 					%li
 						%a{ :href => ideas_path }
@@ -16,8 +16,11 @@
 
 				- else
 					%li
-						%a{ :href => '/auth/dailycred' }
-							%b Login or Sign Up
+						%a{ :href => new_user_session_path }
+							%b Login
+					%li
+						%a{ :href => new_user_registration_path }
+							%b Sign Up
 				%li
 					%a{ :href => '//github.com/aaasen/spark' }
 						%b Github
