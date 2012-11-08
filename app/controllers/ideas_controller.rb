@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_filter :require_login, :except => [:new, :create]
+  before_filter :authenticate_user!, :except => [:new, :create]
 
   def index
     @ideas = current_user.ideas
