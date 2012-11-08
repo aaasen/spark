@@ -47,4 +47,6 @@ gem 'valid_email'
 
 gem 'filepicker-rails'
 
+gem 'acts-as-taggable-on'
+
 gem "mocha", :group => :test
