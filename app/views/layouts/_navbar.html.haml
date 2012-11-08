@@ -1,0 +1,28 @@
+
+.navbar.navbar-inverse
+	.navbar-inner
+		%a.brand{ :href => root_path }
+			Spark
+		.pull-right
+			%ul.nav
+				- if current_user
+					%li
+						%a{ :href => user_path(current_user) }
+							%b My Profile
+					%li
+						%a{ :href => dailycred_engine.logout_path }
+							%b Sign Out
+				- else
+					%li
+						%a{ :href => '/auth/dailycred' }
+							%b Login
+					%li
+						%a{ :href => '/auth/dailycred' }
+							%b Sign Up
+				%li
+					%a{ :href => '/jobs/new' }
+						%b Ideas
+		
+				%li
+					%a{ :href => '/jobs' }
+						%b New Idea!

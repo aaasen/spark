@@ -1,4 +1,6 @@
 Spark::Application.routes.draw do
+  resources :users
+
   resources :ideas
 
   mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
