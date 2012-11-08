@@ -8,7 +8,7 @@
 			%ul.nav
 				- if current_user
 					%li
-						%a{ :href => destroy_user_session_path(current_user) }
+						%a{ :href => destroy_user_session_path }
 							%b Sign Out
 					%li
 						%a{ :href => ideas_path }
