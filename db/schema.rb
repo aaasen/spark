@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108171641) do
+ActiveRecord::Schema.define(:version => 20121108172139) do
 
   create_table "ideas", :force => true do |t|
     t.string   "name"
@@ -39,11 +39,8 @@ ActiveRecord::Schema.define(:version => 20121108171641) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "uid"
-    t.string   "email"
     t.integer  "created",    :limit => 8
     t.string   "username"
-    t.boolean  "admin"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
