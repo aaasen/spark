@@ -1,9 +1,6 @@
 Spark::Application.routes.draw do
   resources :users
-
   resources :ideas
-
-  mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
 
   match 'home' => 'high_voltage/pages#show', :id => 'home'
   # The priority is based upon order of creation:
