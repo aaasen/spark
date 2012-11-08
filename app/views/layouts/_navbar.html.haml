@@ -2,24 +2,23 @@
 .navbar.navbar-inverse
 	.navbar-inner
 		%a.brand{ :href => root_path }
-			Spark
+			%b
+				Spark
 		.pull-right
 			%ul.nav
 				- if current_user
 					%li
 						%a{ :href => dailycred_engine.logout_path }
 							%b Sign Out
+					%li
+						%a{ :href => ideas_path }
+							%b Ideas
+
 				- else
 					%li
 						%a{ :href => '/auth/dailycred' }
-							%b Login
-					%li
-						%a{ :href => '/auth/dailycred' }
-							%b Sign Up
+							%b Login or Sign Up
 				%li
-					%a{ :href => '/jobs/new' }
-						%b Ideas
-		
-				%li
-					%a{ :href => '/jobs' }
-						%b New Idea!
+					%a{ :href => '//github.com/aaasen/spark' }
+						%b Github
+

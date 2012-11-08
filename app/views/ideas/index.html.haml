@@ -1,18 +1,11 @@
 
-%h1 hello
+.row
+  .span4
+    %h1 new idea
 
-%table
-  %tr
-    %th Name
-    %th Content
-    %th User
-  - for idea in @ideas
-    %tr
-      %td= idea.name
-      %td= idea.content
-      %td= idea.user
-      %td= link_to 'Show', idea
-      %td= link_to 'Edit', edit_idea_path(idea)
-      %td= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete
+    = render 'new'
 
-%p= link_to "New Idea", new_idea_path
+  .span8
+    %h1 all ideas
+
+    = render @ideas

@@ -18,7 +18,7 @@ class IdeasController < ApplicationController
   def create
     @idea = current_user.ideas.create(params[:idea])
     if @idea.save
-      redirect_to @idea, :notice => "Successfully created idea."
+      redirect_to ideas_path, :notice => "Successfully created idea."
     else
       render :action => 'new'
     end

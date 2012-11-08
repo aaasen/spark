@@ -1,16 +1,11 @@
 = form_for @idea do |f|
   = f.error_messages
   %p
-    = f.label :name
-    %br
-    = f.text_field :name
+    = f.text_field :name, :class =>  'span4', :placeholder => 'name'
   %p
-    = f.label :content
-    %br
-    = f.text_area :content
+    = f.text_area :content, :rows => 10, :class =>  'span4', :placeholder => 'the idea'
   %p
-    = f.label 'Tags'
-    %br
-    = f.text_field :tag_list
+    = f.text_field :tag_list, :class =>  'span4', :placeholder => 'tags, comma, separated'
   %p
-    = f.submit
+    .right
+      = f.submit 'Create!', :class => 'btn btn-primary'
