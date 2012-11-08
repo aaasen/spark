@@ -1,4 +1,5 @@
 Spark::Application.routes.draw do
+  mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
