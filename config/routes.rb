@@ -1,5 +1,7 @@
 Spark::Application.routes.draw do
   mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
+
+  match 'home' => 'high_voltage/pages#show', :id => 'home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -49,7 +51,7 @@ Spark::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'sessions#info'
+  root :to => 'high_voltage/pages#show', :id => 'home'
 
   # See how all your routes lay out with "rake routes"
 
