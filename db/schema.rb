@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108061723) do
+ActiveRecord::Schema.define(:version => 20121108171641) do
 
   create_table "ideas", :force => true do |t|
     t.string   "name"
@@ -39,27 +39,13 @@ ActiveRecord::Schema.define(:version => 20121108061723) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "provider"
     t.string   "uid"
     t.string   "email"
-    t.integer  "created",       :limit => 8
+    t.integer  "created",    :limit => 8
     t.string   "username"
-    t.boolean  "verified"
     t.boolean  "admin"
-    t.string   "referred_by"
-    t.string   "token"
-    t.text     "facebook"
-    t.text     "tags"
-    t.text     "referred"
-    t.text     "google"
-    t.text     "twitter"
-    t.text     "github"
-    t.text     "access_tokens"
-    t.boolean  "subscribed"
-    t.string   "display"
-    t.text     "identities"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
 end
