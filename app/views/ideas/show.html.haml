@@ -1,0 +1,18 @@
+- title "Idea"
+
+%p
+  %strong Name:
+  = @idea.name
+%p
+  %strong Content:
+  = @idea.content
+%p
+  %strong User:
+  = @idea.user
+
+%p
+  = link_to "Edit", edit_idea_path(@idea)
+  |
+  = link_to "Destroy", @idea, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", ideas_path

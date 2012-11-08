@@ -1,4 +1,6 @@
 Spark::Application.routes.draw do
+  resources :ideas
+
   mount Dailycred::Engine => '/auth', :as => 'dailycred_engine'
 
   match 'home' => 'high_voltage/pages#show', :id => 'home'

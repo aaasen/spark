@@ -1,0 +1,17 @@
+- title "Ideas"
+
+%table
+  %tr
+    %th Name
+    %th Content
+    %th User
+  - for idea in @ideas
+    %tr
+      %td= idea.name
+      %td= idea.content
+      %td= idea.user
+      %td= link_to 'Show', idea
+      %td= link_to 'Edit', edit_idea_path(idea)
+      %td= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Idea", new_idea_path
