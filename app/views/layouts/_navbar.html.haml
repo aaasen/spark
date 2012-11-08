@@ -7,9 +7,6 @@
 			%ul.nav
 				- if current_user
 					%li
-						%a{ :href => user_path(current_user) }
-							%b My Profile
-					%li
 						%a{ :href => dailycred_engine.logout_path }
 							%b Sign Out
 				- else
