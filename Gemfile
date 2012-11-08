@@ -2,37 +2,49 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development do
+	gem 'sqlite3'
+	gem 'nifty-generators'
+end
 
-gem 'sqlite3'
+group :production do
+	gem 'pg'
+end
 
+gem 'thin'
 
-# Gems used only for assets and not required
-# in production environments by default.
+# best user auth and engagement system ever!
+gem 'dailycred', '~> 0.1.42'
+
+gem 'therubyracer'
+
+# static page handler
+gem 'high_voltage'
+
+# twitter bootstrap for quick styling
+gem 'twitter-bootstrap-rails'
+
+gem 'less-rails'
+
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+	gem 'sass-rails',   '~> 3.2.3'
+	gem 'coffee-rails', '~> 3.2.1'
+	
+	gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# gravatar images for users
+gem 'gravtastic'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'haml'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# form error messages
+gem 'dynamic_form'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+gem 'valid_email'
 
-# To use debugger
-# gem 'debugger'
+gem 'filepicker-rails'
+
+gem "mocha", :group => :test
