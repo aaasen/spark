@@ -5,6 +5,8 @@ gem 'rails', '3.2.8'
 group :development do
 	gem 'sqlite3'
 	gem 'nifty-generators'
+	gem 'hpricot'
+	gem 'ruby_parser'
 end
 
 group :production do
