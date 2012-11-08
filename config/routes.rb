@@ -1,5 +1,7 @@
 Spark::Application.routes.draw do
-  devise_for :users
+  devise_for :users do
+    match '/signout' => 'devise/sessions#destroy'
+  end
 
   resources :users
   resources :ideas
