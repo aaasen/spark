@@ -2,7 +2,7 @@ class IdeasController < ApplicationController
   before_filter :require_login, :except => [:new, :create]
 
   def index
-    @ideas = Idea.all
+    @ideas = current_user.ideas
   end
 
   def show
