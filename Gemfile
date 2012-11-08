@@ -13,9 +13,6 @@ end
 
 gem 'thin'
 
-# best user auth and engagement system ever!
-gem 'dailycred', '~> 0.1.42'
-
 gem 'therubyracer'
 
 # static page handler
@@ -50,3 +47,5 @@ gem 'filepicker-rails'
 gem 'acts-as-taggable-on'
 
 gem "mocha", :group => :test
+
+gem 'devise'
