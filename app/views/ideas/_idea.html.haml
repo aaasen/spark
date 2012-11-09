@@ -5,4 +5,4 @@
 			%h3
 				= idea.name
 			%p
-				= idea.content
+				= BlueCloth.new(idea.content).to_html.html_safe
