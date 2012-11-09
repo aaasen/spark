@@ -51,3 +51,5 @@ gem 'acts-as-taggable-on'
 gem "mocha", :group => :test
 
 gem 'devise'
+
+gem 'bluecloth'
