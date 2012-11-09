@@ -2,7 +2,15 @@
 .idea
 	.row
 		.span8
-			%h3
-				= idea.name
+			.row
+				.span6
+					%h3
+						= idea.name
+				.span2
+					%h3.right
+						= link_to 'edit', edit_idea_path(idea)
+						|
+						= link_to 'delete', idea, :method => :delete
+
 			%p
 				= BlueCloth.new(idea.content).to_html.html_safe
