@@ -53,3 +53,5 @@ gem "mocha", :group => :test
 gem 'devise'
 
 gem 'bluecloth'
+
+gem 'rails-backbone'
