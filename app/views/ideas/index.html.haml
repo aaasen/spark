@@ -1,11 +1,20 @@
 
-.row
-  .span4
-    %h1 new idea
+/ .row
+/   .span4
+/     %h1 new idea
 
-    = render 'new'
+/     = render 'new'
 
-  .span8
-    %h1 all ideas
+/   .span8
+/     %h1 all ideas
 
-    = render @ideas
+/     = render @ideas
+
+#ideas
+
+:javascript
+  $(function() {
+    // Blog is the app name
+    window.router = new Spark.Routers.IdeasRouter({ideas: #{@ideas.to_json.html_safe}});
+    Backbone.history.start();
+  });
